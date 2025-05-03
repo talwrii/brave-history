@@ -3,6 +3,10 @@ Search Brave browser history from the command-line.
 
 **CAVEAT: I wrote this tool but then discovered that updates to the History sqlite file were delayed, which is not suitable for my use cases. I am sharing this code because it might be useful and I wrote it.**
 
+**My search for this feature continues on Stack exchange:
+https://superuser.com/questions/1895909/query-brave-chrome-vivaldi-chromium-history-from-the-command-line
+**
+
 ## Motivation
 History is useful; GUIs are irritating; the command-line has a lot of features.
 
