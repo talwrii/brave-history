@@ -11,6 +11,7 @@ setuptools.setup(
     license='BSD',
     keywords='brave,history,cli,command-line',
     url='',
+    install_requires=["pytz", "tzlocal"],
     packages=["brave_history"],
     long_description=open('README.md').read(),
     entry_points={
