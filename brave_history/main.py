@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 
 HISTORY_PATH =  Path.home() / ".config" / "BraveSoftware" / "Brave-Browser" / "Default" / "History"
 
-PARSER = argparse.ArgumentParser(description='Output brave history')
+PARSER = argparse.ArgumentParser(description='Output brave history', epilog="By @readwithai  📖 https://readwithai.substack.com/ ⚡️ machine-aided reading")
 PARSER.add_argument('--data-path', action='store_true', default=False)
 PARSER.add_argument('--sqlite', action='store_true', default=False, help="Open the file with sqlite")
 field_mx = PARSER.add_mutually_exclusive_group()

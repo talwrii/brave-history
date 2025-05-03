@@ -29,4 +29,4 @@ I also create a [stream of tools](https://readwithai.substack.com/p/my-productiv
 I write about lots of things - including tools like this - on [X](https://x.com/readwithai).
 My [blog](https://readwithai.substack.com/) is more about reading and research and agency.
 
-![@readwithai logo](./logo.png)
+[![@readwithai logo](./logo.png)](https://readwithai.substack.com/)
