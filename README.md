@@ -18,3 +18,6 @@ It should be noted that much of the tooling for Chrome can be adapted to Brave.
 Brave exposes and sqlite database with history. You may prefer to access this directly for your use cases, particularly if you want to remove dependencies.
 
 [mozeidon](https://github.com/egovelox/mozeidon) is a command-line tool with a corresponding browser extension for Chrome which can fetch history, bookmarks and control tabs. I deemed the extension too heavy-weight for my purposes.
+
+## References
+1. [Browsing Chrome history and bookmarks with fzf](https://junegunn.github.io/fzf/examples/chrome/)
