@@ -1,11 +1,10 @@
 # brave-history
 Search Brave browser history from the command-line.
 
-**CAVEAT: I wrote this tool but then discovered that updates to the History sqlite file were delayed, which is not suitable for my use cases. I am sharing this code because it might be useful and I wrote it.**
+## Caveats
+This program uses the `History` sqlite database provided by Chrome. This is not updated immediately. I was getting delays in the order of 8 seconds when I tested this out.
 
-**My search for this feature continues on Stack exchange:
-https://superuser.com/questions/1895909/query-brave-chrome-vivaldi-chromium-history-from-the-command-line
-**
+`mozeidon` seems to give virtually instant data but requires considerably more configuarion than this tool which just works.
 
 ## Motivation
 History is useful; GUIs are irritating; the command-line has a lot of features.
@@ -17,7 +16,17 @@ It should be noted that much of the tooling for Chrome can be adapted to Brave.
 
 Brave exposes and sqlite database with history. You may prefer to access this directly for your use cases, particularly if you want to remove dependencies.
 
-[mozeidon](https://github.com/egovelox/mozeidon) is a command-line tool with a corresponding browser extension for Chrome which can fetch history, bookmarks and control tabs. I deemed the extension too heavy-weight for my purposes.
+[mozeidon](https://github.com/egovelox/mozeidon) is a command-line tool with a corresponding browser extension for Chrome which can fetch history, bookmarks and control tabs. I deemed the extension too heavy-weight for my purposes - it requires the installation of a browser extension, two command-line programs, and editing Chrome's configuration files. It does perform certain other functionality such as querying and interacting with tabs where there may be no alternative to using this approach.
 
 ## References
 1. [Browsing Chrome history and bookmarks with fzf](https://junegunn.github.io/fzf/examples/chrome/)
+
+## About me
+I am **@readwithai**. I create tools for reading, research and agency sometimes using the markdown editor [Obsidian](https://readwithai.substack.com/p/what-exactly-is-obsidian).
+
+I also create a [stream of tools](https://readwithai.substack.com/p/my-productivity-tools) that are related to carrying out my work.
+
+I write about lots of things - including tools like this - on [X](https://x.com/readwithai).
+My [blog](https://readwithai.substack.com/) is more about reading and research and agency.
+
+![@readwithai logo](./logo.png)

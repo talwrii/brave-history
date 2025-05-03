@@ -24,11 +24,7 @@ PARSER.add_argument('--domain', help="Filter for this domain")
 PARSER.add_argument('--path', help="Filter for this domain")
 PARSER.add_argument('--today', help="Filter for this domain", action='store_true')
 PARSER.add_argument('--hour', help="Filter for this domain", action='store_true')
-
-
-
-
-
+PARSER.add_argument("filter", type=str, nargs='*')
 
 
 
@@ -41,6 +37,7 @@ def main():
     args = PARSER.parse_args()
     if args.data_path:
         print(HISTORY_PATH)
+        return
 
     shutil.copy(HISTORY_PATH, tmp.name)
     try:
@@ -53,9 +50,29 @@ def main():
         conn = sqlite3.connect(tmp.name)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
-        cursor.execute('SELECT u.url as url, title, v.visit_time as time FROM urls u JOIN visits v ON v.url=u.id ORDER BY last_visit_time desc')
+        cursor.execute('SELECT u.url as url, title, v.visit_time as time FROM urls u JOIN visits v ON v.url=u.id ORDER BY v.visit_time desc')
         rows = cursor.fetchall()
         for row in rows:
+            if args.filter:
+
+                failed = False
+                for x in args.filter:
+                    if x in row["url"]:
+                        continue
+
+                    if x in row["title"]:
+                        continue
+
+                    if x in row["url"]:
+                        continue
+
+                    failed = True
+                    break
+
+                if failed:
+                    continue
+
+
             info = urlparse(row["url"])
             if args.domain:
                 if not domain_prefix(args.domain, info.netloc):
