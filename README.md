@@ -33,9 +33,9 @@ This searches the url and the titleof the page.
 ## Alternatives and prior work
 It should be noted that much of the tooling for Chrome can be adapted to Brave.
 
-Brave exposes and sqlite database with history. You may prefer to access this directly for your use cases, particularly if you want to remove dependencies.
+Brave exposes an sqlite database containing the user's history called `History`. You may prefer to access this directly for your use cases, particularly if you want to remove dependencies.
 
-[mozeidon](https://github.com/egovelox/mozeidon) is a command-line tool with a corresponding browser extension for Chrome which can fetch history, bookmarks and control tabs. I deemed the extension too heavy-weight for my purposes - it requires the installation of a browser extension, two command-line programs, and editing Chrome's configuration files. It does perform certain other functionality such as querying and interacting with tabs where there may be no alternative to using this approach.
+[mozeidon](https://github.com/egovelox/mozeidon) is a command-line tool with a corresponding browser extension for Chrome which can fetch history and bookmarks and control tabs. I deemed the extension too heavy-weight for my purposes - it requires the installation of a browser extension, two command-line programs, and editing Chrome's configuration files. It does perform certain other functionality such as querying and interacting with tabs where there may be no alternative to using an extension.
 
 ## References
 1. [Browsing Chrome history and bookmarks with fzf](https://junegunn.github.io/fzf/examples/chrome/)
